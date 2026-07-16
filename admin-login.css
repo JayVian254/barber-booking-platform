@@ -1,0 +1,387 @@
+/* ===========================================
+   PICASSO BARBERING
+   Admin Login
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root{
+
+    --gold:#C9A84C;
+    --gold-light:#DBB95C;
+
+    --black:#080808;
+    --dark:#111111;
+    --card:rgba(18,18,18,.88);
+
+    --border:#2a2a2a;
+
+    --text:#ffffff;
+    --gray:#9b9b9b;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Inter,sans-serif;
+
+    background:
+    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
+    url("../images/admin-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+/* Dark overlay if image fails */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:#080808;
+
+z-index:-2;
+
+}
+
+/* Login Card */
+
+.login-container{
+
+width:100%;
+
+max-width:430px;
+
+background:var(--card);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(201,168,76,.15);
+
+border-radius:18px;
+
+padding:45px 35px;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.65);
+
+animation:fadeUp .6s ease;
+
+}
+
+/* Logo */
+
+.logo{
+
+text-align:center;
+
+margin-bottom:35px;
+
+}
+
+.logo img{
+
+width:80px;
+
+margin:auto;
+
+margin-bottom:15px;
+
+}
+
+.logo h1{
+
+font-size:34px;
+
+letter-spacing:5px;
+
+font-weight:700;
+
+color:var(--gold);
+
+}
+
+.logo p{
+
+letter-spacing:10px;
+
+margin-top:5px;
+
+font-size:13px;
+
+color:white;
+
+}
+
+.logo span{
+
+display:block;
+
+margin-top:15px;
+
+font-size:13px;
+
+color:var(--gray);
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
+}
+
+/* Heading */
+
+form h2{
+
+text-align:center;
+
+margin-bottom:30px;
+
+font-weight:400;
+
+}
+
+/* Inputs */
+
+.input-group{
+
+margin-bottom:22px;
+
+}
+
+.input-group label{
+
+display:block;
+
+margin-bottom:8px;
+
+font-size:14px;
+
+color:#ddd;
+
+}
+
+.input-group input{
+
+width:100%;
+
+padding:15px;
+
+border-radius:10px;
+
+background:#181818;
+
+border:1px solid var(--border);
+
+color:white;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+.input-group input:focus{
+
+outline:none;
+
+border-color:var(--gold);
+
+box-shadow:0 0 12px rgba(201,168,76,.25);
+
+}
+
+/* Button */
+
+button{
+
+width:100%;
+
+padding:16px;
+
+margin-top:10px;
+
+border:none;
+
+border-radius:10px;
+
+background:var(--gold);
+
+color:black;
+
+font-size:16px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:var(--gold-light);
+
+transform:translateY(-2px);
+
+box-shadow:0 12px 30px rgba(201,168,76,.35);
+
+}
+
+/* Status Message */
+
+#loginStatus{
+
+margin-top:15px;
+
+text-align:center;
+
+font-size:14px;
+
+color:var(--gray);
+
+min-height:18px;
+
+}
+
+/* Forgot Password */
+
+form a{
+
+display:block;
+
+margin-top:22px;
+
+text-align:center;
+
+color:var(--gold);
+
+text-decoration:none;
+
+font-size:14px;
+
+}
+
+form a:hover{
+
+text-decoration:underline;
+
+}
+
+/* Back Link */
+
+.back-link{
+
+margin-top:25px;
+
+text-align:center;
+
+}
+
+.back-link a{
+
+color:#888;
+
+text-decoration:none;
+
+font-size:14px;
+
+}
+
+.back-link a:hover{
+
+color:var(--gold);
+
+}
+
+/* Hidden accessibility text */
+
+.sr-only{
+
+position:absolute;
+
+width:1px;
+
+height:1px;
+
+padding:0;
+
+margin:-1px;
+
+overflow:hidden;
+
+clip:rect(0,0,0,0);
+
+border:0;
+
+}
+
+/* Animation */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:500px){
+
+.login-container{
+
+padding:35px 25px;
+
+}
+
+.logo h1{
+
+font-size:28px;
+
+}
+
+}

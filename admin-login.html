@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrator login for Picasso Barbering – secure access to the management portal.">
+    <title>Picasso Barbering · Admin Login</title>
+
+    <!-- Existing stylesheet (kept as-is) -->
+    <link rel="stylesheet" href="css/admin-login.css">
+</head>
+
+<body>
+    <!-- Main container with accessible role -->
+    <div class="login-container" role="main" aria-labelledby="login-heading">
+
+        <!-- Brand / Logo section -->
+        <div class="logo" aria-label="Picasso Barbering brand">
+            <h1 id="brand-heading">
+                <span aria-hidden="true">PICASSO</span>
+                <span class="sr-only">Picasso</span>
+            </h1>
+            <p>BARBERING</p>
+            <span>Administrator Portal</span>
+        </div>
+
+        <!-- Login form -->
+        <form id="adminLoginForm" novalidate aria-labelledby="login-heading">
+
+            <h2 id="login-heading">Welcome Back</h2>
+
+            <!-- Email field -->
+            <div class="input-group">
+                <label for="email">Email address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="admin@picassobarbering.com"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                    aria-describedby="email-help"
+                >
+                <span id="email-help" class="sr-only">Enter your registered email address.</span>
+            </div>
+
+            <!-- Password field -->
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="••••••••"
+                    autocomplete="current-password"
+                    required
+                    aria-required="true"
+                    aria-describedby="password-help"
+                >
+                <span id="password-help" class="sr-only">Enter your secure administrator password.</span>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" id="loginBtn">
+    Login
+</button>
+
+<p id="loginStatus"></p>
+
+            <!-- Forgot password link -->
+            <a href="#" aria-label="Reset your password">Forgot Password?</a>
+
+            <!-- Optional hidden fields for security / CSRF (placeholder) -->
+            <!-- <input type="hidden" name="csrf_token" value="..."> -->
+
+        </form>
+
+        <!-- Back to main site link (added for convenience) -->
+        <p class="back-link" style="margin-top: 1.5rem; font-size: 0.9rem;">
+            <a href="/" aria-label="Return to the main Picasso Barbering website">← Back to site</a>
+        </p>
+
+    </div>
+
+    <!-- Existing JavaScript module (kept as-is) -->
+    <script type="module" src="js/admin-login.js"></script>
+</body>
+</html>
